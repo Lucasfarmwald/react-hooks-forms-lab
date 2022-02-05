@@ -1,6 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
+
+
 
 function Filter({ onCategoryChange }) {
+  const [filtered, setFiletered] = useState([])
+
+  function categoryChange(event){
+    setFiletered(filtered.target.value)
+
+  }
+
   return (
     <div className="Filter">
       <input type="text" name="search" placeholder="Search..." />
