@@ -3,16 +3,17 @@ import { v4 as uuid } from "uuid";
 
 function ItemForm(props) {
 
-  function onItemFormSubmit(){
-    
+  const [item, setItem] = useState("Produce")
 
+  function onItemFormSubmit(event){
+    setItem(event.target.value)
   }
 
   return (
     <form className="NewItem">
       <label>
         Name:
-        <input type="text" name="name" />
+        <input type="text" name="name" onChange={onItemFormSubmit} value={item}  />
       </label>
 
       <label>
