@@ -18,7 +18,7 @@ function ItemForm(props) {
         </select>
       </label>
 
-      <button type="submit" onChange={props.onItemFormSubmit} >Add to List</button>
+      <button type="submit"  >Add to List</button>
     </form>
   );
 }
